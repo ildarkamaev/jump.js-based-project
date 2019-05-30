@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700&display=swap");
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+@each $name,
+$color in $bg-colors {
+    .#{$name} {
+        background: $color;
+    }
+}
+
+.btn {
+    margin-top: 1rem;
+    text-decoration: none;
+    display: inline-block;
+    padding: 1rem 3rem;
+    border-radius: 1rem;
+    background: $btn-color;
+}

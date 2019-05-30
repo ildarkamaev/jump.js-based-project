@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="css/master.css" />
+    <title>Jump.js animation</title>
+</head>
+
+<body>
+    <!-- Add the target classes to the element -->
+    <section class="first target2">
+        <div class="wrapper">
+            <h1>
+                First section
+            </h1>
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias provident, sit doloremque minus beatae ad culpa labore nesciunt iste maiores mollitia sint enim neque blanditiis dolorum quas! Eveniet, excepturi libero!
+            </p>
+
+            <a id="btn1" class="btn" href="#">Click Me!</a>
+        </div>
+        <div class="pic"><img src="images/selfie.svg" alt="" /></div>
+    </section>
+    <section class="second target3">
+        <div class="wrapper">
+            <h1>
+                Second section
+            </h1>
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias provident, sit doloremque minus beatae ad culpa labore nesciunt iste maiores mollitia sint enim neque blanditiis dolorum quas! Eveniet, excepturi libero!
+            </p>
+            <a id="btn3" class="btn" href="#">Back up!</a>
+        </div>
+    </section>
+
+    <section class="third target">
+        <div class="pic"><img src="images/mobile_user.svg" alt="" /></div>
+        <div class="wrapper">
+            <h1>
+                Last Section
+            </h1>
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias provident, sit doloremque minus beatae ad culpa labore nesciunt iste maiores mollitia sint enim neque blanditiis dolorum quas! Eveniet, excepturi libero!
+            </p>
+            <a id="btn2" class="btn" href="#">Back up!</a>
+        </div>
+    </section>
+    <!-- duration of the scroll
+     How many pixels is the scroll offset from the target class. Can be negative or positive value -->
+    <script type="module">
+        import jump from "./node_modules/jump.js/dist/jump.module.js"; let button = document.getElementById("btn1"); let button2 = document.getElementById("btn2"); let button3 = document.getElementById("btn3"); button.addEventListener("click", () => { jump(".target",
+        { duration: 2000 }); }); button2.addEventListener("click", () => { jump(".target3", { offset: 200 }); }); button3.addEventListener("click", () => { jump(".target2"); });
+    </script>
+</body>
+
+</html>
